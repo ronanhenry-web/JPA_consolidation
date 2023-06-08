@@ -12,6 +12,6 @@ public interface CommandeJpaRepo extends JpaRepository<Commande, Long> {
 
     List<Commande> findByNomClientAndPrenom(String nomClient, String prenomClient);
 
-    @Query("select cmd from Commande cmd where cmd.nomClient=:nomClient and cmd.prenomClient=:prenomClient")
+    @Query("select cmd from Commande cmd where cmd.nomClient =:nomClient and cmd.prenomClient =:prenomClient")
     List<Commande> trouve(String nomClient, String prenomClient);
 }

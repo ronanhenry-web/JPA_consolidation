@@ -13,7 +13,7 @@ public class CommandeArticle {
     private String denominationArticle;*/
 
     @EmbeddedId
-    CommandeArticleid pk;
+    CommandeArticleId pk;
 
     private Integer quantite;
 

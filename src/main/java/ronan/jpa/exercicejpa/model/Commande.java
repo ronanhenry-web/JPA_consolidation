@@ -58,4 +58,12 @@ public class Commande {
     public void setPrenomClient(String prenomClient) {
         this.prenomClient = prenomClient;
     }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
 }
