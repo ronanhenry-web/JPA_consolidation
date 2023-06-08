@@ -1,9 +1,6 @@
 package ronan.jpa.exercicejpa.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "facture")
@@ -12,8 +9,9 @@ public class Facture {
     @Column(name="numero_commande")
     private Long numeroCommande;
 
+    @Enumerated(EnumType.STRING)
     @Column(name="statut_paiement")
-    private String statutPaiement;
+    private StatutPaiement statutPaiement;
 
     public Long getNumeroCommande() {
         return numeroCommande;
@@ -23,11 +21,11 @@ public class Facture {
         this.numeroCommande = numeroCommande;
     }
 
-    public String getStatutPaiement() {
+    public StatutPaiement getStatutPaiement() {
         return statutPaiement;
     }
 
-    public void setStatutPaiement(String statutPaiement) {
+    public void setStatutPaiement(StatutPaiement statutPaiement) {
         this.statutPaiement = statutPaiement;
     }
 }

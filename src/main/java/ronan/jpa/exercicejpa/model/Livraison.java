@@ -11,9 +11,10 @@ public class Livraison {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_livraison")
     private Long idLivraison;
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name="numero_commande")
     private LocalDateTime dateLivraison;
-    @Column(name="date_livraison_effective")
+    @Column(name="statut_paiement")
     private Long numeroCommande;
 
     public Long getIdLivraison() {

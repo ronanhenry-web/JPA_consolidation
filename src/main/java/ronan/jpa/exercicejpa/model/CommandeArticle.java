@@ -1,39 +1,38 @@
 package ronan.jpa.exercicejpa.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "commande_article")
 public class CommandeArticle {
-    @Id
-    private long numero;
+    /*@Id
+    @Column(name="numero_commande")
+    private long numeroCommande;
 
     @Column(name="denomination_article")
-    private String denominationArticle;
+    private String denominationArticle;*/
 
-    private int quantite;
+    @EmbeddedId
+    CommandeArticleid pk;
 
-    public long getNumero()
-    {
-        return numero;
+    private Integer quantite;
+
+    public long getNumeroCommande() {
+        return this.pk.getNumeroCommande();
     }
 
-    public void setNumero(long numero)
-    {
-        this.numero = numero;
+    public void setNumeroCommande(long numeroCommande) {
+        this.pk.setNumeroCommande(numeroCommande);
     }
 
     public String getDenominationArticle()
     {
-        return denominationArticle;
+        return this.pk.getDenominationArticle();
     }
 
     public void setDenominationArticle(String denominationArticle)
     {
-        this.denominationArticle = denominationArticle;
+        this.pk.setDenominationArticle(denominationArticle);
     }
 
     public int getQuantite()
