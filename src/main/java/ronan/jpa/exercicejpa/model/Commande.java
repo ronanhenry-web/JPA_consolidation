@@ -20,6 +20,13 @@ public class Commande {
     @Column(name="prenom_client")
     private String prenomClient;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumns({
+            @JoinColumn(name = "nom_client", referencedColumnName = "nom"),
+            @JoinColumn(name = "prenom_client", referencedColumnName = "prenom")
+    })
+    private Client client;
+
     public long getNumero() {
         return numero;
     }
