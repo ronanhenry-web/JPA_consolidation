@@ -25,4 +25,12 @@ public class ClientIdEmbedded implements Serializable {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
+
+    @Override
+    public String toString() {
+        return "ClientIdEmbedded{" +
+                "nom='" + nom + '\'' +
+                ", prenom='" + prenom + '\'' +
+                '}';
+    }
 }

@@ -7,19 +7,12 @@ import java.io.Serializable;
 
 @Embeddable
 public class CommandeArticleId implements Serializable {
-    @Column(name="numero_commande")
-    private long numeroCommande;
 
     @Column(name="denomination_article")
     private String denominationArticle;
 
-    public long getNumeroCommande() {
-        return numeroCommande;
-    }
-
-    public void setNumeroCommande(long numeroCommande) {
-        this.numeroCommande = numeroCommande;
-    }
+    @Column(name="numero_commande")
+    private Long numeroCommande;
 
     public String getDenominationArticle() {
         return denominationArticle;
@@ -27,5 +20,13 @@ public class CommandeArticleId implements Serializable {
 
     public void setDenominationArticle(String denominationArticle) {
         this.denominationArticle = denominationArticle;
+    }
+
+    public Long getNumeroCommande() {
+        return numeroCommande;
+    }
+
+    public void setNumeroCommande(Long numeroCommande) {
+        this.numeroCommande = numeroCommande;
     }
 }

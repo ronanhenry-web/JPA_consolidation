@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "client", schema = "commandes")
+@Table(name = "client")
 // 1 @IdClass(ClientId.class)
 public class Client {
 
@@ -43,5 +43,27 @@ public class Client {
         nomPrenom.setPrenom(prenom);
     }
 
+    public List<Commande> getCommandes() {
+        return commandes;
+    }
+
+    public void setCommandes(List<Commande> commandes) {
+        this.commandes = commandes;
+    }
+
+    public ClientIdEmbedded getNomPrenom() {
+        return nomPrenom;
+    }
+
+    public void setNomPrenom(ClientIdEmbedded nomPrenom) {
+        this.nomPrenom = nomPrenom;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "nomPrenom=" + nomPrenom +
+                '}';
+    }
 }
 
