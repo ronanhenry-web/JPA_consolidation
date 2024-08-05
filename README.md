@@ -1,4 +1,4 @@
-<h1 align="left">Projet Java / Objectif consolidation de JPA</h1>
+<h1 align="left">Projet Java / Objectif consolidation de JPA avec le DAO, les annotations, le JPQL et les transactions</h1>
 
 <h3 align="left">Installation : cloner le projet puis lancer un IDE IntelliJ et pour Run l'application suivre les étapes suivantes :  
 
