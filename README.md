@@ -1,4 +1,4 @@
-# Projet Java
+# Projet JPA Consolidation
 
 Objectif consolidation de JPA avec le DAO, les annotations, le JPQL et les transactions
 
