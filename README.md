@@ -7,7 +7,7 @@ Objectif consolidation de JPA avec le DAO, les annotations, le JPQL et les trans
 Le projet a été créé sous IntelliJ, pour le démarrer suivre les étapes suivantes.
 
 - Cloner le projet
-- Avoir une BDD et suivre les consignes du fichier properties
+- Avoir une BDD et suivre les consignes du fichier properties + les erreurs SQL indiquant de créer des tables
 - Compiler le fichier main
 
 ## Sources & Outils
